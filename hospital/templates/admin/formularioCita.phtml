@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml'; ?>
+
+<main class="container mx-auto mt-8">
+    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Editar Cita</h2>
+    
+    <form action="<?php echo BASE_URL; ?>citas/actualizarCita/<?php echo $cita->id; ?>" method="POST">
+    <input type="hidden" name="paciente_id" value="<?php echo $cita->paciente_id; ?>">
+    <input type="date" name="fecha" value="<?php echo $cita->fecha; ?>">
+    <input type="time" name="hora" value="<?php echo $cita->hora; ?>">
+    <button type="submit">Actualizar Cita</button>
+</form>
+
+</main>
+
+
+<?php require 'templates/footer.phtml'; ?>
